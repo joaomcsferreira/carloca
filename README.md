@@ -46,22 +46,21 @@ https://github.com/joaomcsferreira/carloca.git
 cd carloca
 ```
 
-Dentro da pasta raiz do projeto, execute:
+Dentro da pasta raiz do projeto, vamos construir a imagem para o MySQL, execute:
 
 ```bash
-# Construindo a imagem para o MySQL.
-
 docker build -t mysql-image -f database/Dockerfile .
 ```
 
-```bash
-# Executando o contêiner criado.
+Executando o contêiner criado, execute:
 
+```bash
 docker run -p 3306:3306 -d --rm --name mysql-container mysql-image
 ```
 
+Agora, o próximo passo é criar e popular o banco de dados, execute:
+
 ```bash
-# "Agora, o próximo passo é criar e popular o banco de dados, execute:"
 # para Linux:
 docker exec -i mysql-container mysql -uroot -ppassword < database/carloca_db.sql
 
