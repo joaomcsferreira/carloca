@@ -3,6 +3,7 @@
 Este é o projeto final referente ao módulo 3 do curso de Vem Ser Tech - Back End!, que tem como objetivo a criação do banco de dados para o sistema de aluguel de veículos denominado CARLOCA!
 
 ![Alt text](./image/carloca.drawio.svg)
+
 # Conteúdo
 
 - [Requisitos globais](#requisitos-globais)
@@ -33,7 +34,7 @@ cd carloca
 Dentro da pasta raiz do projeto, vamos construir a imagem para o MySQL, execute:
 
 ```bash
-docker build -t mysql-image -f database/Dockerfile .
+docker build -t mysql-image -f Dockerfile .
 ```
 
 Executando o contêiner criado, execute:
