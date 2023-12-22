@@ -2,6 +2,7 @@
 
 Este é o projeto final referente ao módulo 3 do curso de Vem Ser Tech - Back End!, que tem como objetivo a criação do banco de dados para o sistema de aluguel de veículos denominado CARLOCA!
 
+![Alt text](./image/carloca.drawio.svg)
 # Conteúdo
 
 - [Requisitos globais](#requisitos-globais)
