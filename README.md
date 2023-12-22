@@ -7,26 +7,9 @@ Este é o projeto final referente ao módulo 3 do curso de Vem Ser Tech - Back E
 - [Requisitos globais](#requisitos-globais)
 - [Primeiros passos](#primeiros-passos)
 - [Instalação e configuração](#instalação-e-configuração)
+- [Criação Manual](#criação-manual)
+- [Selects e Querys](#selects-e-querys)
 - [Autor](#autor)
-
-# Funcionalidades
-
-### Requisitos funcionais:
-
-- [x] **Um carro possui modelo montadora, cor e versão.**
-- [x] **As cores de carro disponiveis são apenas branco, preto e prata.**
-- [x] **Existem várias categorias de veiculos (hatch, sedam compacto, sedam médio, SUV, etc...)**
-- [x] **Um cliente pode alugar um carro somente na modalidade "diária".**
-- [x] **Um cliente não pode alugar mais de um carro.**
-- [x] **Enquanto um carro estiver locado por um cliente não pode ser ofetado para outro.**
-- [x] **O sistema deve manter o histórico dos clientes que locaram determinado carro.**
-- [x] **O sistema deve manter o histórico de quantos quilometros o cliente rodou com o carro bem como a quilometragem atual de cada um dos carros.**
-- [x] **Existem várias unidades da fraquia CARLOCA o sistema deve saber onde o carro foi locado e onde foi devolvido cada veículo.**
-
-### Requisito não funcionais:
-
-- [x] **Devem ser gerados inserts e selects que possibilitem validar cada um dos requisitos acima.**
-- [x] **O exercicio deve ser desenvolvido considerando todos os principios de normalização de dados.**
 
 # Requisitos globais
 
@@ -34,7 +17,7 @@ Este é o projeto final referente ao módulo 3 do curso de Vem Ser Tech - Back E
 
 # Primeiros passos
 
-A seguir, estão os passos para instalar, configurar e executar este aplicativo utilizando Docker, para a execução manual desse projeto sem a utilização de Docker siga para o item [Execução Manual](#execução-manual).
+A seguir, estão os passos para instalar, configurar e executar este aplicativo utilizando Docker, para a execução manual desse projeto sem a utilização de Docker siga para o item [Criação Manual](#criação-manual).
 
 # Instalação e configuração
 
@@ -68,8 +51,26 @@ docker exec -i mysql-container mysql -uroot -ppassword < database/carloca_db.sql
 Get-Content database/carloca_db.sql | docker exec -i mysql-container mysql -uroot -ppassword
 ```
 
-# Execução Manual
+### Utilização no Gerenciador de Banco de Dados
+    - host: localhost
+    - port: 3306
+    - user: root
+    - password: password
+    - database: carloca
+
+# Criação Manual
+
+Para a utilização dos scripts desenvolvidos nesse projeto será necessário um gerenciador de bando de dados juntamente com o MySQL já devidamente instalado no computador, ao acessar esse gerenciador execute os script `carloca-created-database.sql` e `carloca-populated-database.sql` contidos no caminho `./database/scripts`.
+
+# Selects e querys
+
+Tendo o banco de dados já criado e populado com os dados necessários, você pode prosseguir com a execução do script `selects-and-checks.sql` localizado no diretório `./database/scripts` utilizando um gerenciador de banco de dados. Certifique-se de conectar a ferramenta ao banco de dados específico que contém as tabelas e dados relacionados.
+
+ 1. Abra o gerenciador de banco de dados de sua escolha (por exemplo, MySQL Workbench, pgAdmin, SQL Server Management Studio).
+ 2. Conecte-se ao servidor de banco de dados onde o seu banco de dados está hospedado.
+ 3. Abra o script no editor da ferramenta.
+ 4. Execute cada os scripts de formas individuais para verificar as informações e relacionamentos de cada select.
 
 # Autor
 
-João Marcos C. Ferreira - Código e Documentação [Linkedin](https://www.linkedin.com/in/joao-mcf/)
+João Marcos C. Ferreira - Código e Documentação [Linkedin](https://www.linkedin.com/in/joaomcsferreira/)
